@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block header_title %}
+Last Tweets
+{% endblock %}
+
+{% block content %}
+<h1>Latest Tweets</h1>
+	{% for tweets in tweet %}
+	<a href="{% url 'first_app:user_profile' user_id=tweets.user.id %}" >
+		<p>{{tweets.user}}</p>
+	</a>
+		<p>{{tweets.text}} </p>
+	{%endfor%}
+
+	<br>
+{% endblock %}
+
+
+
+
+
+
+

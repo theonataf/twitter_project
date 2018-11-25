@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+ <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+ <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ <title>{% block header_title %}{% endblock %}</title>
+</head>
+<body>
+
+ <div class='container'>
+   <nav>
+     <a href="/first_app/"> Twitter Home |</a>
+   </nav>
+
+   <div id='content'>
+     {% block content %}{% endblock %}
+
+     {% block tweets %}
+       {% for tweet in list %}
+
+         <div class="tweet">
+           <a href="/first_app/profile/{{tweet.user.id}}/">
+           <h3>{{ tweet.user.username }}</h3></a>
+
+           <div class="tweet_user">
+             <p>{{ tweet.text }}</p>
+           </div>
+
+         </div>
+         <br>
+       {% endfor %}
+
+     {% endblock %}
+
+   </div>
+ </div>
+
+</body>
+</html>

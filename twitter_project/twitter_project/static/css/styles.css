@@ -1,0 +1,56 @@
+* {
+    margin: 0px;
+    padding: 0px;
+
+}
+
+body {
+    font-family: 'Helvetica';
+}
+
+.container {
+    width: 80%;    
+    margin-left: 10%; 
+}
+
+
+.tweet {
+    border: 1px solid #bdbdbd;
+    border-radius: 5px;
+    margin: 5px 20px 5px 10px;
+    padding: 8px 10px;
+     
+
+}
+
+.tweet a{
+    color: red;
+    text-decoration: underline ;
+
+}
+
+.tweet a:hover {
+    color: white ;
+}
+
+.tweet:hover {
+    background-color: #4646FF; 
+}
+
+.tweet_user {
+    padding-top: 10px; 
+}
+
+nav {
+    padding: 20px 10px;
+    background-color: #003366;
+    border-radius: 20px;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: lighter;
+} 
