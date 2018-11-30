@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block header_title %}Login{% endblock %}
+
+{% block content %}
+
+	<h1>Fill the login form:</h1>
+
+	<form enctype="multipart/form-data" method="POST" >
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type="submit" value="signup">
+	</form>
+
+{% endblock %}
+

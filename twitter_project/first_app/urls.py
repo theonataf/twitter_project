@@ -11,4 +11,9 @@ urlpatterns = [
 	path('user_profile/<int:user_id>', views.user_profile, name='user_profile'),
 	path('write_a_new_tweet/', views.form_new_tweet, name='new_tweet'),
 	path('write_a_new_tweet/<int:user_id>', views.new_user_tweet, name='new_tweet'),
+	path('login/', views.log_in, name='login'),
+	path('logout/', views.logout_view, name='logout'),
+	path('profile/<int:user_id>', views.profile, name='profile'),
+	
+	path('change_password/', views.change_password, name= 'change_password' ),
 ]

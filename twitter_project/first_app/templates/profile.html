@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+<title>Profile of </title>
+<link rel="stylesheet" type="text/css" href="{% static 'css/tweets_style.css' %}">
+</head>
+<body>
+<h1>Profile of {{tweet.user.first_name}}</h1>
+
+	{% for tweets in tweet %}
+		<p>{{tweets.text}} </p>
+	{%endfor%}
+
+	{% if is_logged %}
+	<p>eh ouai maggle</p>
+	<a href="/first_app/write_a_new_tweet/{{tweet.0.user.id}}" >
+<h2> Write a new tweet </h2>
+</a>
+	{% endif %}
+</body>
+</html>
